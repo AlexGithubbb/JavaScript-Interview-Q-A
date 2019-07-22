@@ -22,6 +22,17 @@ console.log(newStr);
 //for the issues about arrays, most of the problems would be sth about array.split("") / do something... / .join("");
 
 
+// Check if a value is classified as a boolean primitive. Return true or false.
+// Boolean primitives are true and false.
+
+function booWho(bool) {
+  // What is the new fad diet for ghost developers? The Boolean.
+  return (typeof bool === "boolean");
+}
+
+booWho(null);
+
+
 
 
 
