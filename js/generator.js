@@ -16,3 +16,5 @@ for(let value of g){
   console.log(value);
 }
 
+// today's will do it
+
