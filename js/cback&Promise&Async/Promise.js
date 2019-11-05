@@ -43,9 +43,21 @@ const promise3 = new Promise((resolve, reject) => {
     resolve("goodbye");
   },1000);
 })
-const promise4 = fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json());
+// const promise4 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("goodbye");
+//   },1000);
+// })
+const promise5 = fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json());
 
-Promise.all([promise1, promise2, promise3, promise4]).then((values) => console.log(values));
+Promise.all([promise1, promise2, promise3, promise5]).then((values) => console.log(values));
 
 
+// const promise1 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("this is promise1 after 1 sec");
+//   }, 1000);
+// })
+
+// promise1.then(res =>console.log(res));
 

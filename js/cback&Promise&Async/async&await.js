@@ -37,14 +37,21 @@ function createPost(post) {
 
 // init()
 
-// Async await with fetch
 
-async function init() {
-  // const data = await fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json());
-  // console.log(data);
+
+
+// fetch method
+function init1 (){
+  fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json()).then(data => console.log(data))
+}
+ init1()
+
+
+// Async await with fetch
+async function init2() {
   const res = await fetch('https://jsonplaceholder.typicode.com/users');
   const data = await res.json();
   console.log(data);
 }
 
-init();
+init2();

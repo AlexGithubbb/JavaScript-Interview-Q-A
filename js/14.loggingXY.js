@@ -1,9 +1,10 @@
-(function (){
-  var x = y = 200;
+(function() {
+  var x = (y = 200);
+  // console.log('x: ', x); // 200
 })();
 
 console.log('y: ', y); // 200 but will call an error if its under strict mode
-console.log('x: ', x); // error: is not defined
+// console.log('x: ', x); // error: is not defined
 
 // the deep explore way:
 // var y;
@@ -14,6 +15,3 @@ console.log('x: ', x); // error: is not defined
 
 // console.log(y);
 // console.log(x);
-
-
-

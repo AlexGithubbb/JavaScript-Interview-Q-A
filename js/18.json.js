@@ -25,11 +25,11 @@ const myJsonObj = {
   myNumber: 123,
   myNull: null,
   myBoolean: true,
-  myUndefined: undefined,
+  // myUndefined: undefined,
   myArray: [1, 2, 'banada'],
-  myFunction: function sum(a,b){
-    return a + b
-  },
+  // myFunction: function sum(a,b){
+  //   return a + b
+  // },
   myObject: {
     name: 'Alex',
     age: 26,
@@ -37,5 +37,6 @@ const myJsonObj = {
   }
 };
 
-
 console.log(JSON.stringify(myJsonObj));
+
+// except for undefined and functions

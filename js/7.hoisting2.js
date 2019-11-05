@@ -1,7 +1,8 @@
 // LET & CONST
 
-let name;
 // console.log(name); // Error:  Cannot access 'name' before initialization
+let name;
+// console.log(name);// undefined
 
 name = 'Alex'; // define name here
 console.log(name); // Alex

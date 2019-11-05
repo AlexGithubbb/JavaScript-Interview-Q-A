@@ -7,16 +7,22 @@ function getPosts(){
   setTimeout(() => {
     let output = '';
     posts.forEach((post, index) => {
-      output += `<li>${post.title}</li>`;
+      output += `<li>${post.title} ${post.text}</li>`;
     })
     document.body.innerHTML = output;
+    console.log('step 2');
+    
   }, 1000);
 }
 
-// add a callback function after the third post created, this is where we use callback function 
+// getPosts()
+
+// add a callback function after the third post created, this is where we use callback function
 function createPost(post, callback){
   setTimeout(() => {
     posts.push(post);
+    // callback func
+    console.log("step 1");
     callback();
   }, 2000);
 }

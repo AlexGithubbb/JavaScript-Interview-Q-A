@@ -6,14 +6,14 @@
 // }
 
 // currying version
-
-// function getProduct(num1){
-//   return function (num2){
+// function getProduce(num1){
+//   // return function (num2){
+//     return (num2) => {
 //     return num1 * num2;
 //   }
 // }
 
-// let result = getProduct(2)(3);
+// let result = getProduce(2)(3);
 // console.log(result);
 
 
@@ -27,6 +27,7 @@
 
 // better way
 
+
 function getTime(distance) {
   return function(speed){ // return function two
     return distance / speed;
@@ -35,6 +36,8 @@ function getTime(distance) {
 
 let distance400k = getTime(400);
 let time = distance400k(50);
+//  time = distance400k(60);
+//  time = distance400k(80);
 console.log(time);
 
 

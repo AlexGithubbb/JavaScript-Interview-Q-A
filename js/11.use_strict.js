@@ -1,10 +1,10 @@
 // // Enforce strict parsing and error handling in our code
 
-// 'use strict'
+'use strict'
 
-// function callItem(a ,a ,b){
-//   console.log(a, a, b);
-// }
+function callItem(a ,a ,b){
+  console.log(a, a, b);
+}
 
 // callItem(1, 2, 3); // Duplicate parameter name not allowed in this context
 
@@ -13,9 +13,15 @@
 
 // let myCar = 'toyota'; // Error： myCar is not defined
 
-// (function car (){
-//   console.log(myCar);
+// (function car() {
+//   myCar = "fox"
+//   function showCar(){
+//     console.log(myCar);
+//   }
+//   showCar()
 // })();
+
+// console.log(myCar);
 
 
 // // avoid us to delete that sth is not deletable
@@ -24,7 +30,6 @@
 
 
 // // 'use strict' fails fast and fail loudly
-
 
 //Setup
 var contacts = [
@@ -53,13 +58,13 @@ var contacts = [
     "likes": ["JavaScript", "Gaming", "Foxes"]
   }
 ];
-// var prop = "likes";
-// if(contacts[0].prop ){
-//   console.log('true');
-// }else{
-//   console.log('false');
-// }
-// console.log(contacts[0].firstName);
+var prop = "likes";
+if(contacts[0].prop ){
+  console.log('true');
+}else{
+  console.log('false');
+}
+console.log(contacts[0].firstName);
 
 function lookUpProfile(name, prop) {
 

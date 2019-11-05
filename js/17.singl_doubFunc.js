@@ -1,20 +1,19 @@
-
-
 function getTotal() {
   // const newArr = Array.prototype.slice.call(arguments);
   const newArr = Array.from(arguments);
-  if(newArr.length >= 2){
+  if (newArr.length >= 2) {
     let total = 0;
     newArr.forEach(item => {
-      total += item
-    })
-    return total
-  }else{
-    return num2 =>{
+      total += item;
+    });
+    return total;
+  } else {
+    return num2 => {
       return newArr[0] + num2;
-    }
+    };
   }
 }
+
 // function getTotal() {
 //   // const newArr = Array.prototype.slice.call(arguments);
 //   const newArr = Array.from(arguments);

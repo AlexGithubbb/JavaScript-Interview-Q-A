@@ -1,5 +1,7 @@
-// Closure is an inner function that has access to the scope of an enclosing function, (nothing but function with preserved data)
+// check this out too!
+//https://www.freecodecamp.org/news/learn-javascript-closures-in-n-minutes/
 
+// Closure is an inner function that has access to the scope of an enclosing function, (nothing but function with preserved data)
 
 // variable in its own scope
 // variable in the scope of outter function
@@ -7,7 +9,8 @@
 // its own parameters
 // paramters of outer function;
 
-// Example ONE
+////////////////////// Example ONE ///////////////////////////////
+
 // let obj = function (){
 //   let i = 4;
 
@@ -20,7 +23,6 @@
 //     }
 //   }
 // }
-
 // let x = obj();
 // // let result = x.getI();
 // // console.log(result); //4
@@ -29,8 +31,8 @@
 // let result = x.getI();
 // console.log(result); // 2
 
+////////////////////// Example TWO ///////////////////////////////
 
-// Example TWO
 // var passed = 3;
 
 // var addTo = function(){ // this is a closure function, it uses the variable from outside
@@ -39,50 +41,41 @@
 //   return inner + passed;
 // }
 
-
-// console.log(addTo()); // 5
-// console.dir(addTo);
+// console.log(addTo()); // 6
+// console.dir(addTo); // function addTo()
 
 // var passed = 5;
-// console.log(addTo()); // 7
-// console.dir(addTo);
+// console.log(addTo()); // 6
+// // console.dir(addTo);
 
+////////////////////// Example THREE ///////////////////////////////
 
-// Example THREE
 // CLOSURE WAY
-var addTo = function (passed){
-    function add(inner){
-      return inner + passed;
-    }
-    return add;
-}
-var sum = new addTo(3);
-console.log(sum(2));
-
-
-
-
-// CLASS WAY
-class AddTo{
-  constructor(passed){
-    this.passed = passed;
+var addTo = function(passed) {
+  function add(inner) {
+    return inner + passed;
   }
-    add(inner){
-      return inner + this.passed;
-    }
-    static substract(inner){
-      return inner - this.passed;
-    }
-}
+  return add;
+};
+var sum = new addTo(3);
+console.log(sum(2)); //5
 
+// // CLASS WAY
+// class AddTo{
+//   constructor(passed){
+//     this.passed = passed;
+//   }
+//     add(inner){
+//       return inner + this.passed;
+//     }
+//     static substract(inner){
+//       return inner - this.passed;
+//     }
+// }
 
-var addThree = new AddTo(3);
-var result = addThree.add(2); // 5
-console.log(result);
-
-
-
-
+// var addThree = new AddTo(3);
+// var result = addThree.add(2); // 5
+// console.log(result);
 
 // Mazdy Soraya
 // 6 months ago(edited)
